@@ -33,16 +33,14 @@ service:
   # loadBalancerSourceRanges:
   # - 10.10.10.0/24
 
+## Configure Ingress based on the documentation here: https://kubernetes.io/docs/concepts/services-networking/ingress/
+##
 ingress:
   enabled: false
   annotations: {}
-  hosts:
-    - host: chart-example.local
-      paths: []
   tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+  hosts: []
+  path: /
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
