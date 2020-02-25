@@ -18,7 +18,10 @@ WORKING_DIRECTORY="$PWD"
   echo "ERROR: Could not find Helm charts in $WORKING_DIRECTORY"
   exit 1
 }
-[ -z "$HELM_VERSION" ] && HELM_VERSION=2.8.1
+[ "$HELM_VERSION" ] || {
+  echo "ERROR: Environment variable HELM_VERSION is required"
+  exit 1
+}
 [ "$CIRCLE_BRANCH" ] || {
   echo "ERROR: Environment variable CIRCLE_BRANCH is required"
   exit 1
@@ -46,12 +49,11 @@ apk add ca-certificates git openssh
 
 echo '>> Installing Helm...'
 cd /tmp/helm/bin
-wget "https://storage.googleapis.com/kubernetes-helm/helm-v${HELM_VERSION}-linux-amd64.tar.gz"
+wget "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz"
 tar -zxf "helm-v${HELM_VERSION}-linux-amd64.tar.gz"
 chmod +x linux-amd64/helm
 alias helm=/tmp/helm/bin/linux-amd64/helm
-helm version -c
-helm init -c
+helm version
 
 echo ">> Checking out $GITHUB_PAGES_BRANCH branch from $GITHUB_PAGES_REPO"
 cd /tmp/helm/publish
@@ -90,4 +92,3 @@ git add .
 git status
 git commit -m "Published by CircleCI $CIRCLE_BUILD_URL"
 git push origin "$GITHUB_PAGES_BRANCH"
-

@@ -10,4 +10,5 @@ jobs:
           environment:
             - GITHUB_PAGES_REPO: cetic/helm-charts
             - HELM_CHART: adminer
+            - HELM_VERSION: 3.1.0
           command: wget -O - https://raw.githubusercontent.com/cetic/helm-adminer/develop/publish.sh | sh

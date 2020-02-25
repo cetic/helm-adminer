@@ -6,13 +6,13 @@ replicaCount: 1
 
 image:
   repository: adminer
-  tag: 4.7.5-standalone
+  tag: 4.7.6-standalone
   pullPolicy: IfNotPresent
 
 # See envs from https://hub.docker.com/_/adminer/
 config:
   plugins: ""
-  design: ""
+  design: "pepa-linha"
   externalserver: ""
 
 nameOverride: ""
