@@ -9,7 +9,7 @@ This [Helm](https://github.com/kubernetes/helm) chart installs [Adminer](https:/
 ## Prerequisites
 
 - Kubernetes cluster 1.10+
-- Helm 2.8.0+
+- Helm 3.0.0+
 - PV provisioner support in the underlying infrastructure.
 
 ## Installation
@@ -86,9 +86,9 @@ The following table lists the configurable parameters of the Adminer chart and t
 | **Affinity**                                                                                                                              |
 | `affinity`                        | node/pod affinities                                                     | `{}`                        |
 | **LivenessProbe**                                                                                                                         |
-| `livenessProbe`                   | Liveness probe settings                                                 | `{}`                        |
+| `livenessProbe`                   | Liveness probe settings                                                 | `nil`                        |
 | **ReadnessProbe**                                                                                                                         |
-| `readinessProbe`                  | Readiness probe settings                                                | `{}`                        |
+| `readinessProbe`                  | Readiness probe settings                                                | `nil`                        |
 
 ## Credits
 
