@@ -86,9 +86,9 @@ The following table lists the configurable parameters of the Adminer chart and t
 | **Affinity**                                                                                                                              |
 | `affinity`                        | node/pod affinities                                                     | `{}`                        |
 | **LivenessProbe**                                                                                                                         |
-| `livenessProbe`                   | Liveness probe settings                                                 | `{}`                        |
+| `livenessProbe`                   | Liveness probe settings                                                 | `nil`                        |
 | **ReadnessProbe**                                                                                                                         |
-| `readinessProbe`                  | Readiness probe settings                                                | `{}`                        |
+| `readinessProbe`                  | Readiness probe settings                                                | `nil`                        |
 
 ## Credits
 
