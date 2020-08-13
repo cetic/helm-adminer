@@ -8,6 +8,7 @@ image:
   repository: adminer
   tag: 4.7.6-standalone
   pullPolicy: IfNotPresent
+  pullSecrets: []
 
 # See envs from https://hub.docker.com/_/adminer/
 config:
