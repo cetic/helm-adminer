@@ -56,7 +56,7 @@ The following table lists the configurable parameters of the Adminer chart and t
 | --------------------------------- | ----------------------------------------------------------------------- | --------------------------- |
 | **Image**                                                                                                                                 |
 | `image.repository`                | Image                                                                   | `adminer`                   |
-| `image.tag`                       | Image tag                                                               | `4.7.6-standalone`          |
+| `image.tag`                       | Image tag                                                               | `4.7.7-standalone`          |
 | `image.pullPolicy`                | Image pull policy                                                       | `IfNotPresent`              |
 | `image.pullSecrets`               | Image pull secrets for private registry                                 | `[]`              |
 | **Config**                                                                                                                                |
