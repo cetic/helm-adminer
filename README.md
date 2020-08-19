@@ -56,14 +56,13 @@ The following table lists the configurable parameters of the Adminer chart and t
 | --------------------------------- | ----------------------------------------------------------------------- | --------------------------- |
 | **Image**                                                                                                                                 |
 | `image.repository`                | Image                                                                   | `adminer`                   |
-| `image.tag`                       | Image tag                                                               | `4.7.6-standalone`          |
+| `image.tag`                       | Image tag                                                               | `4.7.7-standalone`          |
 | `image.pullPolicy`                | Image pull policy                                                       | `IfNotPresent`              |
+| `image.pullSecrets`               | Image pull secrets for private registry                                 | `[]`              |
 | **Config**                                                                                                                                |
 | `config.plugins`                  | List of plugins to install. You can find the list of plugins on [GitHub](https://github.com/vrana/adminer/tree/master/plugins)| ``|
 | `config.design`                   | A bundled design to use. You can find the list of designs on [GitHub](https://github.com/vrana/adminer/tree/master/designs)| ``|
 | `config.externalserver`           | The default host                                                        | ``                          |
-| **Command**                                                                                                                               |
-| `command`                         | Container entrypoint command                                            | `[]`                        |
 | **Service**                                                                                                                               |
 | `service.type`                    | Service type                                                            | `NodePort`                  |
 | `service.port`                    | The service port                                                        | `80`                        |

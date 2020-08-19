@@ -6,8 +6,9 @@ replicaCount: 1
 
 image:
   repository: adminer
-  tag: 4.7.6-standalone
+  tag: 4.7.7-standalone
   pullPolicy: IfNotPresent
+  pullSecrets: []
 
 # See envs from https://hub.docker.com/_/adminer/
 config:
