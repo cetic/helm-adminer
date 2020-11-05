@@ -34,18 +34,32 @@ spec:
               containerPort: 8080
               protocol: TCP
           env:
-          - name: ADMINER_PLUGINS
-            value: {{ .Values.config.plugins }}
-          - name: ADMINER_DESIGN
-            value: {{ .Values.config.design }}
-          - name: ADMINER_DEFAULT_SERVER
-            value: {{ .Values.config.externalserver }}
+            - name: ADMINER_PLUGINS
+              value: {{ .Values.config.plugins }}
+            - name: ADMINER_DESIGN
+              value: {{ .Values.config.design }}
+            - name: ADMINER_DEFAULT_SERVER
+              value: {{ .Values.config.externalserver }}
+          {{- with .Values.resources }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.livenessProbe }}
           livenessProbe:
-{{ toYaml .Values.livenessProbe | indent 12 }}
+            {{ toYaml . | indent 12 }}
+          {{- end }}
+          {{- with .Values.readinessProbe }}
           readinessProbe:
-{{ toYaml .Values.readinessProbe | indent 12 }}
+            {{ toYaml . | indent 12 }}
+          {{- end }}
+      {{- with .Values.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

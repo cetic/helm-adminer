@@ -85,9 +85,11 @@ The following table lists the configurable parameters of the Adminer chart and t
 | **Affinity**                                                                                                                              |
 | `affinity`                        | node/pod affinities                                                     | `{}`                        |
 | **LivenessProbe**                                                                                                                         |
-| `livenessProbe`                   | Liveness probe settings                                                 | `nil`                        |
+| `livenessProbe`                   | Liveness probe settings                                                 | `nil`                       |
 | **ReadnessProbe**                                                                                                                         |
-| `readinessProbe`                  | Readiness probe settings                                                | `nil`                        |
+| `readinessProbe`                  | Readiness probe settings                                                | `nil`                       |
+| `volumeMounts`                    | Add volumeMount to the adminer container                                | `nil`                       |
+| `volumes`                         | Add volumes to the pod                                                  | `nil`                       |
 
 ## Credits
 
