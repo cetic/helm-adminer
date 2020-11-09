@@ -43,6 +43,29 @@ ingress:
   hosts: []
   path: /
 
+# kubectl create secret generic ca --from-file=ca.pem
+# cat > login-ssl.php << EOF
+# <?php
+# require_once('plugins/login-ssl.php');
+# return new AdminerLoginSsl(array("ca" => "/secrets/ca.pem"));
+# EOF
+# kubectl create configmap plugins-enabled --from-file=login-ssl.php
+# volumeMounts:
+#   - name: ca
+#     mountPath: "/secrets/"
+#     readOnly: true
+#   - name: plugins-enabled
+#     mountPath: "/var/www/html/plugins-enabled/"
+#     readOnly: true
+
+# volumes:
+#   - name: ca
+#     secret:
+#       secretName: ca
+#   - name: plugins-enabled
+#     configMap:
+#       name: plugins-enabled
+
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
