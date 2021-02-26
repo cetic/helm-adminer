@@ -18,6 +18,9 @@ keywords:
 source:
   - https://github.com/cetic/helm-adminer
 maintainers:
+  - name: fzalila
+    email: faiez.zalila@cetic.be
+    url: https://github.com/fzalila 
   - name: alexnuttinck
     email: alexandre.nuttinck@cetic.be
     url: https://github.com/alexnuttinck
