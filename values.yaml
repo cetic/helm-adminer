@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: adminer
-  tag: 4.7.7-standalone
+  tag: 4.8.1-standalone
   pullPolicy: IfNotPresent
   pullSecrets: []
 
