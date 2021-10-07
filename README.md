@@ -66,7 +66,7 @@ The following table lists the configurable parameters of the Adminer chart and t
 | **Service**                                                                                                                               |
 | `service.type`                    | Service type                                                            | `NodePort`                  |
 | `service.port`                    | The service port                                                        | `80`                        |
-| `service.nodePort`                | The service port                                                        | `nil`                        |
+| `service.nodePort`                | The nodePort port                                                       | `nil`                        |
 | `service.annotations`             | Custom annotations for service                                          | `{}`                        |
 | `service.labels`                  | Additional custom labels for the service                                | `{}`                        |
 | `service.loadBalancerIP`          | LoadBalancerIP if service type is `LoadBalancer`                        | `nil`                       |
