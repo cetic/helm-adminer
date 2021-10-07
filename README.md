@@ -37,7 +37,7 @@ The following items can be set via `--set` flag during installation or configure
 Install the Adminer helm chart with a release name `my-release`:
 
 ```bash
-helm install --name my-release cetic/adminer
+helm upgrade --install my-release cetic/adminer
 ```
 
 ## Uninstallation
@@ -45,7 +45,7 @@ helm install --name my-release cetic/adminer
 To uninstall/delete the `my-release` deployment:
 
 ```bash
-helm delete --purge my-release
+helm delete my-release
 ```
 
 ## Configuration
