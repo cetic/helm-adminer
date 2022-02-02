@@ -1,5 +1,5 @@
 ---
-{{- if .Values.ingress.enabled -}}
+{{ if .Values.ingress.enabled -}}
 {{- $fullName := include "adminer.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
 apiVersion: extensions/v1beta1
