@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: adminer
-  tag: 4.7.7-standalone
+  tag: 4.8.1-standalone
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -23,6 +23,8 @@ service:
   type: NodePort
   port: 80
   annotations: {}
+  # To set a nodePort. Otherwise kubernetes will use a random nodePort.
+  # nodePort:
   ## Set the LoadBalancer service type to internal only.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
   ##

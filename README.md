@@ -37,7 +37,7 @@ The following items can be set via `--set` flag during installation or configure
 Install the Adminer helm chart with a release name `my-release`:
 
 ```bash
-helm install --name my-release cetic/adminer
+helm upgrade --install my-release cetic/adminer
 ```
 
 ## Uninstallation
@@ -45,7 +45,7 @@ helm install --name my-release cetic/adminer
 To uninstall/delete the `my-release` deployment:
 
 ```bash
-helm delete --purge my-release
+helm delete my-release
 ```
 
 ## Configuration
@@ -66,6 +66,7 @@ The following table lists the configurable parameters of the Adminer chart and t
 | **Service**                                                                                                                               |
 | `service.type`                    | Service type                                                            | `NodePort`                  |
 | `service.port`                    | The service port                                                        | `80`                        |
+| `service.nodePort`                | The nodePort port                                                       | `nil`                        |
 | `service.annotations`             | Custom annotations for service                                          | `{}`                        |
 | `service.labels`                  | Additional custom labels for the service                                | `{}`                        |
 | `service.loadBalancerIP`          | LoadBalancerIP if service type is `LoadBalancer`                        | `nil`                       |
