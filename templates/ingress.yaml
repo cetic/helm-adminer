@@ -1,8 +1,8 @@
 ---
-{{- if .Values.ingress.enabled -}}
+{{ if .Values.ingress.enabled -}}
 {{- $fullName := include "adminer.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
-apiVersion: networking.k8s.io/v1
+apiVersion: {{ include "adminer.ingress.apiVersion" . }}
 kind: Ingress
 metadata:
   name: {{ template "adminer.fullname" . }}-ingress
@@ -36,11 +36,18 @@ spec:
       http:
         paths:
           - path: {{ $ingressPath }}
+            {{- if eq (include "adminer.ingress.apiVersion" $) "networking.k8s.io/v1" }}
             pathType: ImplementationSpecific
+            {{- end }}
             backend:
+              {{- if eq (include "adminer.ingress.apiVersion" $) "networking.k8s.io/v1" }}
               service:
                 name: {{ $fullName }}
                 port:
                   name: http
+              {{- else }}
+              serviceName: {{ $fullName }}
+              servicePort: http
+              {{- end }}
   {{- end }}
 {{- end }}

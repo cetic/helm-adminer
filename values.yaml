@@ -23,6 +23,8 @@ service:
   type: NodePort
   port: 80
   annotations: {}
+  # To set a nodePort. Otherwise kubernetes will use a random nodePort.
+  # nodePort:
   ## Set the LoadBalancer service type to internal only.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
   ##
