@@ -77,6 +77,7 @@ The following table lists the configurable parameters of the Adminer chart and t
 | `ingress.labels`                  | Custom labels                                                           | `{}`                        |
 | `ingress.hosts`                   | Ingress accepted hostnames                                              | `[]`                        |
 | `ingress.tls`                     | Ingress TLS configuration                                               | `[]`                        |
+| `ingress.className`                     | Ingress Class Name                                                |                         |
 | **Resources**                                                                                                                             |
 | `resources`                       | CPU/Memory resource requests/limits                                     | `{}`                        |
 | **Tolerations**                                                                                                                           |
