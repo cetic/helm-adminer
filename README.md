@@ -2,6 +2,10 @@
 
 [![CircleCI](https://circleci.com/gh/cetic/helm-adminer.svg?style=svg)](https://circleci.com/gh/cetic/helm-adminer/tree/master) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![version](https://img.shields.io/github/tag/cetic/helm-adminer.svg?label=release)
 
+## $${\color{red}This \space project \space is \space not \space maintained \space anymore.}$$
+
+If you are interested in maintaining a fork of this project, please chime in in the [dedicated issue](https://github.com/cetic/helm-adminer/issues/16).
+
 ## Introduction
 
 This [Helm](https://github.com/kubernetes/helm) chart installs [Adminer](https://www.adminer.org) in a Kubernetes cluster.
